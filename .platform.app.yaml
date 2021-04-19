@@ -40,9 +40,9 @@ hooks:
 
         # Food advisor seed data
         RELATIONSHIPS=$(echo $PLATFORM_RELATIONSHIPS | base64 --decode | jq '.keys')
-        if [ $RELATIONSHIPS = 'null' ] && [ ! -f seed/sqlite-seeded.txt ]; then
+        if [ $RELATIONSHIPS = 'null' ] && [ ! -f .seed/sqlite-seeded.txt ]; then
             yarn seed
-            echo "SQLite database seeded" > seed/sqlite-seeded.txt
+            echo "SQLite database seeded" > .seed/sqlite-seeded.txt
         fi
 
 # The configuration of app when it is exposed to the web.
@@ -81,6 +81,9 @@ mounts:
     '/.seed':
         source: local
         source_path: seed
+    '/data':
+        source: local
+        source_path: data
     # Allow for updates to the API (new JSONs) at runtime.
     # 'api':
     #     source: local
