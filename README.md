@@ -52,6 +52,10 @@ Once you have created a project and installed the CLI, you're nearly ready for t
 platform project:get -p PROJECT_ID
 ```
 
+### 5. (Optional) Creating and admin user
+
+Once you have deployed your 
+
 ## The Workshop
 
 During StrapiConf, members of the Platform.sh team will be present on the StrapiConf Discord in the following channels:
@@ -85,4 +89,4 @@ Generally, the workshop will have the following parts:
 
 We will guide you through the steps during the workshop, with all code snippets and changes documented in the links above. 
 
-Excited to see you at this years StrapiConf!
+Excited to see you at this year's StrapiConf!

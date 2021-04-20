@@ -4,7 +4,7 @@
 # See https://docs.platform.sh/configuration/app.html
 
 # The name of this app. Must be unique within a project.
-name: app
+name: appb
 
 # The runtime the application uses. Strapi not yet suppported with NodeJS 14.
 type: nodejs:12
@@ -81,12 +81,19 @@ mounts:
     '/.tmp':
         source: local
         source_path: cache
+    # Internal directory for letting us know seed has already occurred. 
     '/.seed':
         source: local
         source_path: seed
+    # Unpcack directory for seeding
     '/data':
         source: local
         source_path: data
+    # Uploads
+    'public':
+        source: local
+        source_path: public
+
     # Allow for updates to the API (new JSONs) at runtime.
     # 'api':
     #     source: local
@@ -104,6 +111,3 @@ mounts:
     #     source: local
     #     source_path: components
     # Allow for media uploads at runtime.
-    'public':
-        source: local
-        source_path: public
