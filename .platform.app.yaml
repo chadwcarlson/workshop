@@ -30,6 +30,9 @@ hooks:
         # Install dependencies and build Strapi.
         yarn --ignore-optional --frozen-lockfile 
         yarn build
+
+        # Allow for seeding
+        ln -s data/.env .env
     # The deploy hook runs after your application has been deployed and started.
     # Code cannot be modified at this point but the database is available.
     # The site is not accepting requests while this script runs so keep it
