@@ -26,7 +26,7 @@ hooks:
 
         # Install dependencies and build Strapi.
         yarn --ignore-optional --frozen-lockfile 
-        yarn build
+        NODE_ENV=production yarn build
 
         # Allow for seeding
         ln -s data/.env .env
