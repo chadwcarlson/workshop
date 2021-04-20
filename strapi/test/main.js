@@ -12,7 +12,7 @@ let timeout = 5000;
 let api;
 
 if (process.env.PORT) {
-    api = supertest(`localhost:${process.env.PORT}`);
+    api = supertest(process.env.PUBLIC_URL);
 } else {
     api = supertest("localhost:1337")
 }
