@@ -23,6 +23,7 @@ describe('Verify collection endpoints are accessible', () => {
 
         it("find", function (done) {
             this.timeout(timeout);
+            console.log(api)
             api.get('/categories')
             .set('Accept', 'application/json')
             .end((err, response) => {

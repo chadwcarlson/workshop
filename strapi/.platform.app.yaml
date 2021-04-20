@@ -24,10 +24,10 @@ hooks:
     deploy: |
         set -e
 
-        # Seed demo data to SQLite
+        # Seed demo data to SQLite.
         ./scripts/seed_data.sh
 
-        # Run tests on collection endpoints
+        # Run tests on collection endpoints.
         yarn test
 
 web:
