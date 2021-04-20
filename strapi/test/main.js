@@ -16,8 +16,6 @@ if (process.env.PUBLIC_URL) {
     api = supertest("localhost:1337")
 }
 
-// let api = supertest('https://www.master-7rqtwti-hshhhiqeooj36.us-4.platformsh.site');
-
 describe('Verify collection endpoints are accessible', () => {
 
     describe("Test GET route /categories", () => {
@@ -27,7 +25,7 @@ describe('Verify collection endpoints are accessible', () => {
             api.get('/categories')
             .set('Accept', 'application/json')
             .end((err, response) => {
-                response.should.have.status(200);
+                response.should.have.status(500);
                 response.body.should.be.a('array');
             done();
             })

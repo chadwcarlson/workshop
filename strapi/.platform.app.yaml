@@ -25,7 +25,9 @@ hooks:
       type: string
       path: scripts/seed_data.sh
     
-    post_deploy: yarn test
+    post_deploy: |
+        set -e
+        yarn test
 
 web:
     commands:
