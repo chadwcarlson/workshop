@@ -21,12 +21,13 @@ hooks:
         # Prepare workshop seed data.
         chmod +x scripts/seed_data.sh && ./scripts/seed_data.sh
 
-    deploy: !include
-      type: string
-      path: scripts/seed_data.sh
-    
-    post_deploy: |
+    deploy: |
         set -e
+
+        # Seed demo data to SQLite
+        ./scripts/seed_data.sh
+
+        # Run tests
         yarn test
 
 web:
