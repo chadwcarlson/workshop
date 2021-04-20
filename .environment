@@ -2,3 +2,4 @@ ENVIRONMENT=$(echo $PLATFORM_ROUTES | base64 --decode | jq -r 'to_entries[] | se
 export PUBLIC_URL=${ENVIRONMENT%/}
 export JWT_SECRET=$PLATFORM_PROJECT_ENTROPY
 export ADMIN_JWT_SECRET=$PLATFORM_PROJECT_ENTROPY
+export NODE_ENV=production

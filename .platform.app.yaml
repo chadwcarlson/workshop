@@ -1,7 +1,4 @@
-# This file describes an application. You can have multiple applications
-# in the same project.
-#
-# See https://docs.platform.sh/configuration/app.html
+# This file describes a Strapi application. See https://docs.platform.sh/configuration/app.html.
 
 # The name of this app. Must be unique within a project.
 name: app
