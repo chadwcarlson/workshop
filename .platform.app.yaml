@@ -1,7 +1,7 @@
 # This file describes a Strapi application. See https://docs.platform.sh/configuration/app.html.
 
 # The name of this app. Must be unique within a project.
-name: app
+name: appb
 
 # The runtime the application uses. Strapi not yet suppported with NodeJS 14.
 type: nodejs:12
@@ -29,22 +29,14 @@ hooks:
         NODE_ENV=production yarn build
 
         # Allow for seeding
-        ln -s data/.env .env
+        ./seed_data.sh
     # The deploy hook runs after your application has been deployed and started.
     # Code cannot be modified at this point but the database is available.
     # The site is not accepting requests while this script runs so keep it
     # fast.
-    deploy: |
-        # Move committed files from temp directory back into mounts.
-        ./scripts/handle_mounts.sh
-
-        # Food advisor seed data
-        RELATIONSHIPS=$(echo $PLATFORM_RELATIONSHIPS | base64 --decode | jq '.keys')
-        if [ $RELATIONSHIPS = 'null' ] && [ ! -f .seed/sqlite-seeded.txt ]; then
-            yarn seed
-            echo "SQLite database seeded" > .seed/sqlite-seeded.txt
-            mv ~/data/uploads/* ~/public/uploads/
-        fi
+    deploy: !include
+      type: string
+      path: seed_data.sh
 
 # The configuration of app when it is exposed to the web.
 web:
