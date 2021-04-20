@@ -7,11 +7,12 @@ let chaiHttp = require('chai-http');
 
 chai.should();
 chai.use(chaiHttp);
+let timeout = 5000;
 
 let api;
 
-if (process.env.PUBLIC_URL) {
-    api = supertest(process.env.PUBLIC_URL);
+if (process.env.PORT) {
+    api = supertest(`localhost:${process.env.PORT}`);
 } else {
     api = supertest("localhost:1337")
 }
@@ -21,7 +22,7 @@ describe('Verify collection endpoints are accessible', () => {
     describe("Test GET route /categories", () => {
 
         it("find", function (done) {
-            this.timeout(5000);
+            this.timeout(timeout);
             api.get('/categories')
             .set('Accept', 'application/json')
             .end((err, response) => {

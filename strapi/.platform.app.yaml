@@ -27,7 +27,7 @@ hooks:
         # Seed demo data to SQLite
         ./scripts/seed_data.sh
 
-        # Run tests
+        # Run tests on collection endpoints
         yarn test
 
 web:
