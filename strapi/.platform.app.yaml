@@ -28,7 +28,9 @@ hooks:
         ./scripts/seed_data.sh
 
         # Run tests on collection endpoints.
-        yarn test
+        if [ "$PLATFORM_BRANCH" != master ]; then
+            yarn test
+        fi
 
 web:
     commands:
