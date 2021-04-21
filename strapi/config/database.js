@@ -29,7 +29,7 @@ if (config.isValidPlatform() && !config.inBuild()) {
     username: credentials.username,
     password: credentials.password,
   };
-  options = {};
+  // options = {};
 
   // settings = {
   //   client: "postgres",
@@ -40,20 +40,20 @@ if (config.isValidPlatform() && !config.inBuild()) {
   //   password: credentials.password
   // };
 
-  // options = {
-  //   ssl: false,
-  //   debug: false,
-  //   acquireConnectionTimeout: 100000,
-  //   pool: {
-  //     min: 0,
-  //     max: 10,
-  //     createTimeoutMillis: 30000,
-  //     acquireTimeoutMillis: 600000,
-  //     idleTimeoutMillis: 20000,
-  //     reapIntervalMillis: 20000,
-  //     createRetryIntervalMillis: 200
-  //   }
-  // };
+  options = {
+    ssl: false,
+    debug: false,
+    acquireConnectionTimeout: 100000,
+    pool: {
+      min: 0,
+      max: 10,
+      createTimeoutMillis: 30000,
+      acquireTimeoutMillis: 600000,
+      idleTimeoutMillis: 20000,
+      reapIntervalMillis: 20000,
+      createRetryIntervalMillis: 200
+    }
+  };
 } else {
     if (config.isValidPlatform()) {
           // Build hook configuration message.
