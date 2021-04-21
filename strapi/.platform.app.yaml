@@ -41,7 +41,7 @@ web:
 
 # .platform.app.yaml
 relationships:
-    database: "db:mysql"
+    database: "dbpostgres:postgresql"
 
 disk: 1024
 

@@ -21,24 +21,24 @@ if (config.isValidPlatform() && !config.inBuild()) {
   const credentials = config.credentials(dbRelationship);
   console.log(`> platform.sh: Using Platform.sh configuration with relationship ${dbRelationship}.`);
 
-  settings = {
-    client: 'mysql',
-    host: credentials.ip,
-    port: credentials.port,
-    database: credentials.path,
-    username: credentials.username,
-    password: credentials.password,
-  };
-  // options = {};
-
   // settings = {
-  //   client: "postgres",
+  //   client: 'mysql',
   //   host: credentials.ip,
   //   port: credentials.port,
   //   database: credentials.path,
   //   username: credentials.username,
-  //   password: credentials.password
+  //   password: credentials.password,
   // };
+  // options = {};
+
+  settings = {
+    client: "postgres",
+    host: credentials.ip,
+    port: credentials.port,
+    database: credentials.path,
+    username: credentials.username,
+    password: credentials.password
+  };
 
   options = {
     ssl: false,
