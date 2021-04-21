@@ -17,7 +17,7 @@ hooks:
     build: |
         # Install dependencies with yarn.
         yarn --ignore-optional --frozen-lockfile
-        # cp .environment .env.production
+        cp .environment .env.development
     # deploy: |
     #     yarn build
 
