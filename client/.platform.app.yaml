@@ -20,7 +20,7 @@ hooks:
 
 web:
     commands: 
-        start: yarn start
+        start: REACT_APP_BACKEND_URL=$BACKEND_URL yarn start
     # commands: 
     #     start: sleep infinity
     # locations:
