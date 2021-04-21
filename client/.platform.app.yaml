@@ -10,9 +10,6 @@ dependencies:
     nodejs:
         yarn: "1.22.5"
 
-relationships:
-    api: "strapi:http"
-
 hooks:
     build: |
         # Install dependencies with yarn.

@@ -1,1 +1,2 @@
-REACT_APP_BACKEND_URL=http://api.internal
+ENVIRONMENT=$(echo $PLATFORM_ROUTES | base64 --decode | jq -r 'to_entries[] | select(.value.id == api) | .key')
+export REACT_APP_BACKEND_URL=${ENVIRONMENT%/}

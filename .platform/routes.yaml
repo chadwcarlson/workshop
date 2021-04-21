@@ -10,6 +10,7 @@
 "https://api.{default}/":
     type: redirect
     to: "https://www.api.{default}/"
+    id: "api"
   
 "https://www.{default}/":
     type: upstream
