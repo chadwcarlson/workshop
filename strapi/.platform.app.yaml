@@ -18,16 +18,30 @@ hooks:
         # Build Strapi (production).
         NODE_ENV=production yarn build
 
-        # Prepare workshop seed data.
-        chmod +x scripts/seed_data.sh && ./scripts/seed_data.sh
+    # deploy: |
+    #     set -e
 
-    deploy: !include
-      type: string
-      path: scripts/seed_data.sh
+    #     # Run tests on collection endpoints.
+    #     if [ "$PLATFORM_BRANCH" != master ]; then
+    #         yarn test
+    #     fi
 
 web:
     commands:
         start: NODE_ENV=production yarn start
+        
+    locations:
+        # For serving the generated OpenAPI specification as part of the documentation.
+        "/docs/spec":
+            root: "extensions/documentation/documentation/1.0.0"
+            allow: true
+            scripts: false
+            index:
+                - full_documentation.json
+
+# .platform.app.yaml
+relationships:
+    database: "dbpostgres:postgresql"
 
 disk: 1024
 
@@ -49,6 +63,6 @@ mounts:
         source: local
         source_path: data
     # Uploads
-    'public':
+    'public/uploads':
         source: local
-        source_path: public
+        source_path: uploads

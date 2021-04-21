@@ -90,3 +90,22 @@ Generally, the workshop will have the following parts:
 We will guide you through the steps during the workshop, with all code snippets and changes documented in the links above. 
 
 Excited to see you at this year's StrapiConf!
+
+- intro/tour
+- small change: email
+- add service: postgres
+- testing: add mocha and Postman tests
+- permissions: modify tests
+- caching: add redis
+- next steps
+
+ALT:
+
+- intro/tour
+- small change: openapispec made public
+- service: postgress + migrate data
+- email: support forgotten password on prod
+- testing: small test/newman
+
+- redis
+- frontend:
