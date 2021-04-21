@@ -98,3 +98,14 @@ Excited to see you at this year's StrapiConf!
 - permissions: modify tests
 - caching: add redis
 - next steps
+
+ALT:
+
+- intro/tour
+- small change: openapispec made public
+- service: postgress + migrate data
+- email: support forgotten password on prod
+- testing: small test/newman
+
+- redis
+- frontend:
