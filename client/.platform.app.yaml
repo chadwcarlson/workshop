@@ -16,7 +16,8 @@ relationships:
 hooks:
     build: |
         # Install dependencies with yarn.
-        yarn --ignore-optional --frozen-lockfile 
+        yarn --ignore-optional --frozen-lockfile
+        cp .environment .env.production
     # deploy: |
     #     yarn build
 
