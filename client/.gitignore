@@ -27,5 +27,5 @@ package-lock.json
 
 
 # demo
-.env.development
+# .env.development
 # .env.production
