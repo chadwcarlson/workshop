@@ -1,0 +1,38 @@
+
+name: frontend
+
+type: nodejs:12
+
+build:
+    flavor: none
+
+dependencies:
+    nodejs:
+        yarn: "1.22.5"
+
+relationships:
+    api: "strapi:http"
+
+hooks:
+    build: |
+        # Install dependencies with yarn.
+        yarn --ignore-optional --frozen-lockfile 
+    deploy: |
+        yarn build
+
+web:
+    commands: 
+        start: yarn start
+    # commands: 
+    #     start: sleep infinity
+    # locations:
+    #     '/':
+    #         root: 'build'
+    #         passthru: false
+    #         index: ['index.html']
+    #         allow: true
+    #         rules:
+    #             # Allow common image files only.
+    #             '\.(jpe?g|png|gif|svgz?|css|js|map|ico|bmp|eot|woff2?|otf|ttf)$':
+    #                 allow: true
+    #                 expires: 300s
