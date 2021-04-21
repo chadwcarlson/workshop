@@ -63,6 +63,6 @@ mounts:
         source: local
         source_path: data
     # Uploads
-    'public':
+    'public/uploads':
         source: local
-        source_path: public
+        source_path: uploads
