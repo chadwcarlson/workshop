@@ -95,5 +95,7 @@ module.exports = {
 };
 ```
 
+- verify local is still using SQLite
 - make and push changes
 - recreate admin account
+
