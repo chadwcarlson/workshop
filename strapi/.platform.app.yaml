@@ -18,19 +18,13 @@ hooks:
         # Build Strapi (production).
         NODE_ENV=production yarn build
 
-        # Prepare workshop seed data.
-        chmod +x scripts/seed_data.sh && ./scripts/seed_data.sh
-
     deploy: |
         set -e
 
-        # Seed demo data to SQLite.
-        ./scripts/seed_data.sh
-
-        # # Run tests on collection endpoints.
-        # if [ "$PLATFORM_BRANCH" != master ]; then
-        #     yarn test
-        # fi
+        # Run tests on collection endpoints.
+        if [ "$PLATFORM_BRANCH" != master ]; then
+            yarn test
+        fi
 
 web:
     commands:

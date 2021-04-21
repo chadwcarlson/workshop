@@ -96,6 +96,12 @@ module.exports = {
 ```
 
 - verify local is still using SQLite
+- remove everything about seeding in .platform.app.yaml
 - make and push changes
 - recreate admin account
+- test data can be migrated to `db`
+
+```
+platform mount:upload --mount web/uploads --source ./uploads
+```
 
