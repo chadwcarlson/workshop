@@ -4,13 +4,13 @@
 # to be processed by Platform.sh.
 
 "https://www.api.{default}/":
+    type: redirect
+    to: "https://api.{default}/"
+
+"https://api.{default}/":
     type: upstream
     upstream: "strapi:http"
     id: "api"
-
-"https://api.{default}/":
-    type: redirect
-    to: "https://www.api.{default}/"
   
 "https://www.{default}/":
     type: upstream
