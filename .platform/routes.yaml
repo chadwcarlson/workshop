@@ -7,7 +7,7 @@
     type: upstream
     upstream: "strapi:http"
 
-"https://{default}/":
+"https://api.{default}/":
     type: redirect
     to: "https://www.api.{default}/"
   
