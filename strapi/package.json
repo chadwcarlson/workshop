@@ -30,6 +30,7 @@
     "lodash": "^4.17.5",
     "mocha": "^8.3.2",
     "newman": "^5.2.2",
+    "pg": "^8.6.0",
     "platformsh-config": "^2.4.1",
     "reactour": "^1.18.0",
     "sqlite3": "^5.0.2",
