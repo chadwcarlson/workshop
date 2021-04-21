@@ -104,6 +104,6 @@ module.exports = {
 ```
 (unzip data.zip)
 platform sql -e db < data/dump.sql
-platform mount:upload --mount public/uploads --source ./data/uploads
+platform mount:upload --mount public/uploads --source ./data/uploads (we've already done this)
 ```
 

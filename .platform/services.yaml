@@ -1,3 +1,7 @@
 dbpostgres:
     type: postgresql:12
     disk: 256
+
+db:
+    type: mariadb:10.5
+    disk: 256
