@@ -44,6 +44,10 @@ web:
             index:
                 - full_documentation.json
 
+# .platform.app.yaml
+relationships:
+    postgresdatabase: "dbpostgres:postgresql"
+
 disk: 1024
 
 mounts:
