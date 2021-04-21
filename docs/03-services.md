@@ -5,18 +5,19 @@ platform environment:branch db
 ```
 
 ```
-yarn add pg platformsh-config
+yarn add mysql platformsh-config
 ```
 
 - Brief overview of config-reader
 - review of environment variables
 - discuss how services are visible to application
-- add PostGres relationship
+- add MariaDB relationship
 
 ```yaml
 # .platform.app.yaml
 relationships:
     postgresdatabase: "dbpostgres:postgresql"
+    database: "db:mysql"
 ```
 
 - create the service
@@ -104,6 +105,6 @@ module.exports = {
 ```
 (unzip data.zip)
 platform sql -e db < data/dump.sql
-platform mount:upload --mount public/uploads --source ./data/uploads (we've already done this)
+X platform mount:upload --mount public/uploads --source ./data/uploads (we've already done this)
 ```
 
