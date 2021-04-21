@@ -66,3 +66,5 @@ export PUBLIC_URL=${ENVIRONMENT%/}
 - Turn on email on `email` branch
 - verify
 - merge
+- show that the same build (treeID is being used)
+- verify on production

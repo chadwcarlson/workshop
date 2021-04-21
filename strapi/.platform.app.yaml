@@ -27,10 +27,10 @@ hooks:
         # Seed demo data to SQLite.
         ./scripts/seed_data.sh
 
-        # Run tests on collection endpoints.
-        if [ "$PLATFORM_BRANCH" != master ]; then
-            yarn test
-        fi
+        # # Run tests on collection endpoints.
+        # if [ "$PLATFORM_BRANCH" != master ]; then
+        #     yarn test
+        # fi
 
 web:
     commands:
