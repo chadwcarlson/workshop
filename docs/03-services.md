@@ -102,6 +102,8 @@ module.exports = {
 - test data can be migrated to `db`
 
 ```
-platform mount:upload --mount web/uploads --source ./uploads
+(unzip data.zip)
+platform sql -e db < data/dump.sql
+platform mount:upload --mount public/uploads --source ./data/uploads
 ```
 

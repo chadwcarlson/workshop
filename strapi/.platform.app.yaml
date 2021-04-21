@@ -18,13 +18,13 @@ hooks:
         # Build Strapi (production).
         NODE_ENV=production yarn build
 
-    deploy: |
-        set -e
+    # deploy: |
+    #     set -e
 
-        # Run tests on collection endpoints.
-        if [ "$PLATFORM_BRANCH" != master ]; then
-            yarn test
-        fi
+    #     # Run tests on collection endpoints.
+    #     if [ "$PLATFORM_BRANCH" != master ]; then
+    #         yarn test
+    #     fi
 
 web:
     commands:
