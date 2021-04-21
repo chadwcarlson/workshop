@@ -29,6 +29,7 @@ hooks:
 web:
     commands:
         start: NODE_ENV=production yarn start
+        
     locations:
         # For serving the generated OpenAPI specification as part of the documentation.
         "/docs/spec":
@@ -41,6 +42,7 @@ web:
 # .platform.app.yaml
 relationships:
     postgresdatabase: "dbpostgres:postgresql"
+    database: "db:mysql"
 
 disk: 1024
 
