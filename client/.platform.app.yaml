@@ -17,8 +17,8 @@ hooks:
     build: |
         # Install dependencies with yarn.
         yarn --ignore-optional --frozen-lockfile 
-    deploy: |
-        yarn build
+    # deploy: |
+    #     yarn build
 
 web:
     commands: 
@@ -36,3 +36,12 @@ web:
     #             '\.(jpe?g|png|gif|svgz?|css|js|map|ico|bmp|eot|woff2?|otf|ttf)$':
     #                 allow: true
     #                 expires: 300s
+
+
+disk: 1024
+
+mounts:
+    # Strapi's cache directory.
+    '/.cache':
+        source: local
+        source_path: cache
