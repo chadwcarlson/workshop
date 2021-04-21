@@ -28,4 +28,4 @@ package-lock.json
 
 # demo
 .env.development
-.env.production
+# .env.production
