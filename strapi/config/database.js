@@ -21,39 +21,39 @@ if (config.isValidPlatform() && !config.inBuild()) {
   const credentials = config.credentials(dbRelationship);
   console.log(`> platform.sh: Using Platform.sh configuration with relationship ${dbRelationship}.`);
 
-  settings = {
-    client: 'mysql',
-    host: credentials.ip,
-    port: credentials.port,
-    database: credentials.path,
-    username: credentials.username,
-    password: credentials.password,
-  };
-  options = {};
-
   // settings = {
-  //   client: "postgres",
+  //   client: 'mysql',
   //   host: credentials.ip,
   //   port: credentials.port,
   //   database: credentials.path,
   //   username: credentials.username,
-  //   password: credentials.password
+  //   password: credentials.password,
   // };
+  // options = {};
 
-  // options = {
-  //   ssl: false,
-  //   debug: false,
-  //   acquireConnectionTimeout: 100000,
-  //   pool: {
-  //     min: 0,
-  //     max: 10,
-  //     createTimeoutMillis: 30000,
-  //     acquireTimeoutMillis: 600000,
-  //     idleTimeoutMillis: 20000,
-  //     reapIntervalMillis: 20000,
-  //     createRetryIntervalMillis: 200
-  //   }
-  // };
+  settings = {
+    client: "postgres",
+    host: credentials.ip,
+    port: credentials.port,
+    database: credentials.path,
+    username: credentials.username,
+    password: credentials.password
+  };
+
+  options = {
+    ssl: false,
+    debug: false,
+    acquireConnectionTimeout: 100000,
+    pool: {
+      min: 0,
+      max: 10,
+      createTimeoutMillis: 30000,
+      acquireTimeoutMillis: 600000,
+      idleTimeoutMillis: 20000,
+      reapIntervalMillis: 20000,
+      createRetryIntervalMillis: 200
+    }
+  };
 } else {
     if (config.isValidPlatform()) {
           // Build hook configuration message.
