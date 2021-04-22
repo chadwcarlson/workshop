@@ -37,6 +37,7 @@
     "strapi-plugin-graphql": "^3.5.1",
     "strapi-plugin-upload": "^3.5.1",
     "strapi-plugin-users-permissions": "^3.5.1",
+    "strapi-provider-email-nodemailer": "^3.6.0",
     "strapi-utils": "^3.5.1",
     "unzip-stream": "^0.3.0"
   },
