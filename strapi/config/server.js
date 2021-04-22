@@ -1,11 +1,11 @@
 const forgotPasswordTemplate = {
     subject: "Strapi: Reset your password",
     html: `<p>We heard that you lost your password. Sorry about that!</p>
-        <p>But don’t worry! You can use the following link to reset your password:</p>
+        <p>But don’t worry! You can use the following link to reset it:</p>
         <p><a href="<%= url %>">Reset password</a></p>
         <p>Thanks!</p>`,
     text: `We heard that you lost your password. Sorry about that!
-    But don’t worry! You can use the following link to reset your password:
+    But don’t worry! You can use the following link to reset it:
     <%= url %>
     Thanks!`
 }
