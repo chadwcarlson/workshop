@@ -15,9 +15,9 @@ hooks:
         # Install dependencies with yarn.
         yarn --ignore-optional --frozen-lockfile
         # cp .environment .env.development
-    deploy: |
-        set -e
-        export CI=true && yarn test
+    # deploy: |
+    #     set -e
+    #     export CI=true && yarn test
 
 web:
     commands: 

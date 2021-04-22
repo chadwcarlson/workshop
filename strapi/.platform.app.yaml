@@ -11,7 +11,7 @@ dependencies:
         yarn: "1.22.5"
 
 relationships:
-    database: "dbpostgres:postgresql"
+    database: "dbpostgresb:postgresql"
 
 hooks:
     build: |
