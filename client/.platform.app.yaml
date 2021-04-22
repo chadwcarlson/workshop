@@ -6,6 +6,9 @@ type: nodejs:12
 build:
     flavor: none
 
+relationships:
+    database: "db:mysql"
+
 dependencies:
     nodejs:
         yarn: "1.22.5"
