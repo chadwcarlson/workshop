@@ -26,6 +26,7 @@
     "knex": "0.16.3",
     "lodash": "^4.17.5",
     "mysql": "^2.18.1",
+    "pg": "^8.6.0",
     "platformsh-config": "^2.4.1",
     "reactour": "^1.18.0",
     "sqlite3": "^5.0.2",
