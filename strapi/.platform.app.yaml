@@ -10,6 +10,9 @@ dependencies:
     nodejs:
         yarn: "1.22.5"
 
+relationships:
+    database: "db:mysql"
+
 hooks:
     build: |
         # Install dependencies with yarn.
