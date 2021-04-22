@@ -90,3 +90,29 @@ Generally, the workshop will have the following parts:
 We will guide you through the steps during the workshop, with all code snippets and changes documented in the links above. 
 
 Excited to see you at this year's StrapiConf!
+
+
+
+# TODO
+
+- Put docs together with links to next pages
+
+- testing: can be done on the frontend, or fix current test?
+- frontend: build? or keep as yarn start?
+
+- SQLite: need a MariaDB or PostgreSQL compatible dump to finish that step.
+
+- email: needs a build. branch, env var enable, push changes
+
+```
+<!-- who knows -->
+[2021-04-22T02:04:07.879Z] error Error: Connection timeout
+    at SMTPConnection._formatError (/app/node_modules/nodemailer/lib/smtp-connection/index.js:774:19)
+    at SMTPConnection._onError (/app/node_modules/nodemailer/lib/smtp-connection/index.js:760:20)
+    at Timeout.<anonymous> (/app/node_modules/nodemailer/lib/smtp-connection/index.js:229:22)
+    at listOnTimeout (internal/timers.js:549:17)
+    at processTimers (internal/timers.js:492:7)
+[2021-04-22T02:04:27.068Z] debug POST /admin/forgot-password (3 ms) 204
+```
+
+DAMN THESE BUILDS ARE LONG, WOULD BE GREAT TO USE THE BUILD CACHE.

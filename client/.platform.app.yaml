@@ -1,0 +1,46 @@
+
+name: frontend
+
+type: nodejs:12
+
+build:
+    flavor: none
+
+dependencies:
+    nodejs:
+        yarn: "1.22.5"
+
+hooks:
+    build: |
+        # Install dependencies with yarn.
+        yarn --ignore-optional --frozen-lockfile
+        # cp .environment .env.development
+    # deploy: |
+    #     set -e
+    #     export CI=true && yarn test
+
+web:
+    commands: 
+        start: REACT_APP_BACKEND_URL=$BACKEND_URL yarn start
+    # commands: 
+    #     start: sleep infinity
+    # locations:
+    #     '/':
+    #         root: 'build'
+    #         passthru: false
+    #         index: ['index.html']
+    #         allow: true
+    #         rules:
+    #             # Allow common image files only.
+    #             '\.(jpe?g|png|gif|svgz?|css|js|map|ico|bmp|eot|woff2?|otf|ttf)$':
+    #                 allow: true
+    #                 expires: 300s
+
+
+disk: 1024
+
+mounts:
+    # Strapi's cache directory.
+    '/.cache':
+        source: local
+        source_path: cache

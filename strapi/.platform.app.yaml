@@ -1,5 +1,5 @@
 
-name: app
+name: strapi
 
 type: nodejs:12
 
@@ -9,6 +9,9 @@ build:
 dependencies:
     nodejs:
         yarn: "1.22.5"
+
+relationships:
+    database: "dbpostgresb:postgresql"
 
 hooks:
     build: |
